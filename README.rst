@@ -18,4 +18,4 @@ Available states
 ``timezone``
 ----------
 
-Configuring timezone by using Pillar data. (Debian only)
+Configuring timezone by using Pillar data.

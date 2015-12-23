@@ -1,15 +1,10 @@
-{% if grains['os_family']=="Debian" %}
+{% set pillar_get = salt['pillar.get'] -%}
 
-{% if pillar['timezone'] and salt['file.file_exists']("/etc/timezone") %}
-/etc/timezone:
-  file.managed:
-    - contents_pillar: timezone
+{% if pillar_get('timezone:name') %}
 
 Readjust time zone:
-  cmd.wait:
-    - name: dpkg-reconfigure -f noninteractive tzdata
-    - watch:
-      - file: /etc/timezone
-{% endif %}
+  timezone.system:
+    - name: {{ pillar_get('timezone:name') }}
+    - utc: {{ pillar_get('timezone:utc', 'True') }}
 
 {% endif %}

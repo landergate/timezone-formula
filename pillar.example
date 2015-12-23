@@ -1,6 +1,9 @@
-# Time zone in TZ-format, e.g.: Europe/London
-#
-# You can use value from "TZ" column: 
-# https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone:
+  # Time zone in TZ-format, e.g.: Europe/London
+  # You can use value from "TZ" column: 
+  # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  name: Europe/London
 
-timezone: Europe/London
+  # Usually it's True. 
+  # Details: https://docs.saltstack.com/en/latest/ref/states/all/salt.states.timezone.html
+  utc: True
