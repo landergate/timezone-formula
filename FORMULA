@@ -1,0 +1,8 @@
+name: timezone
+os: RedHat, Debian, Ubuntu
+os_family: Debian
+version: 201512
+release: 1
+minimum_version: 2015.8
+summary: Formula for timezone management
+description: Formula for managing timezone settings
